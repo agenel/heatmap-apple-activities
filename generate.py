@@ -7,6 +7,9 @@ from datetime import datetime
 import streamlit as st
 import pickle
 
+# Set page to wide mode
+st.set_page_config(layout="wide")
+
 CACHE_FILE = "processed_gps_data.pkl"
 
 def load_or_process_data(folder_path):
@@ -72,6 +75,8 @@ def create_folium_heatmap(coordinates, output_html="cycling_heatmap.html"):
 
     # Add heatmap layer
     HeatMap(coordinates, radius=8, blur=15).add_to(fmap)
+    
+    # Add fullscreen control
     folium.plugins.Fullscreen(
         position="topright",
         title="Expand me",
@@ -83,7 +88,7 @@ def create_folium_heatmap(coordinates, output_html="cycling_heatmap.html"):
     fmap.save(output_html)
 
 def main():
-    st.title("Cycling Activity Heatmap")
+    st.title("Apple Fitness Activity Heatmap")
     
     gpx_folder = "workout-routes"  # change to your actual GPX folder path
     
@@ -123,7 +128,7 @@ def main():
     if filtered_coords:
         create_folium_heatmap(filtered_coords)
         with open("cycling_heatmap.html", "r") as f:
-            st.components.v1.html(f.read(), height=600)
+            st.components.v1.html(f.read(), height=800, width=None)
     else:
         st.warning("No data points in selected time window")
 
