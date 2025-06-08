@@ -193,3 +193,5 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 workout-routes/
+cycling_heatmap.html
+processed_gps_data.pkl
