@@ -2,6 +2,10 @@
 
 A Python application that creates an interactive heatmap visualization of your Apple Fitness activities from exported GPX files. This tool is specifically designed to work with GPX files exported from Apple Fitness/Health app, helping you visualize your workout routes and identify your most frequented paths.
 
+## Screenshot
+
+![Application Screenshot](screenshot.png)
+
 ## Features
 
 - **Interactive Heatmap**: Visualize your Apple Fitness workout routes with an intensity-based heatmap
