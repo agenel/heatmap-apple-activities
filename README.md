@@ -33,7 +33,7 @@ A Python application that creates an interactive heatmap visualization of your A
 1. Clone this repository
 2. Install the required packages:
 ```bash
-pip install streamlit gpxpy folium pandas
+pip install -r requirements.txt
 ```
 
 ## Usage
